@@ -1,0 +1,11 @@
+# Design Files
+*.sketch
+*.fig
+*.xd
+
+# DS_Store
+.DS_Store
+.prettierignore
+
+preview.jpg
+/typemaster-sketch

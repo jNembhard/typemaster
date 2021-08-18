@@ -1,0 +1,47 @@
+// Small tablets and large smartphones (landscape view)
+$screen-sm-min: 410px;
+
+// Small tablets (portrait view)
+$screen-md-min: 768px;
+
+// Desktops
+$screen-lg-min: 992px;
+
+// Small devices
+@mixin mobile {
+  @media (min-width: #{$screen-sm-min}) {
+    @content;
+  }
+}
+
+// Medium devices
+@mixin tablet {
+  @media (min-width: #{$screen-md-min}) {
+    @content;
+  }
+}
+
+// Large devices
+@mixin desktop {
+  @media (min-width: #{$screen-lg-min}) {
+    @content;
+  }
+}
+
+// Custom devices
+@mixin custom($screen) {
+  @media (min-width: $screen+"px") {
+    @content;
+  }
+}
+
+$font: "Barlow", sans-serif;
+$font-title: 900;
+$font-bold: 700;
+$font-body: 500;
+$primary-color: #f16718;
+$primary-active: #ff9b62;
+$secondary-color: #162542;
+$font-color: #7b8bad;
+$bg-color: #ffffff;
+$container-color: #e8eff2;
