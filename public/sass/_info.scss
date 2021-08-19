@@ -1,0 +1,56 @@
+.info {
+  div {
+    margin-bottom: 69px;
+    text-align: center;
+
+    img {
+      width: 25px;
+      height: 20px;
+      margin: 0 145px 48px;
+      padding: 25px;
+      background-color: $primary-color;
+      border-radius: 20px;
+    }
+
+    h3 {
+      color: $secondary-color;
+      font-size: 24px;
+      font-weight: $font-title;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+      line-height: 28px;
+    }
+
+    p {
+      line-height: 26px;
+      margin: 0 24px;
+    }
+
+    @include tablet {
+      text-align: left;
+
+      img {
+        margin: inherit;
+        margin-bottom: 40px;
+        margin-right: 69px;
+        margin-left: 39px;
+      }
+
+      h3 {
+        margin-right: 69px;
+        margin-left: 39px;
+      }
+
+      p {
+        margin: inherit;
+        margin-right: 69px;
+        margin-left: 39px;
+      }
+    }
+  }
+
+  @include tablet {
+    display: grid;
+    grid-template-columns: 280px 280px;
+  }
+}
