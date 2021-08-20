@@ -1,6 +1,6 @@
 .type {
   margin: 0 0 44px 24px;
-  //   border: 1px solid red;
+  // border: 1px solid red;
   overflow: hidden;
 
   @include mobile {
@@ -8,9 +8,13 @@
   }
 
   @include tablet {
-    display: grid;
-    // grid-template-rows: 1fr 1fr 1fr 2fr;
-    // grid-template-columns: 1fr 1fr 1fr 1fr;
+    display: flex;
+    margin-left: 40px;
+
+    .type__description-container {
+      margin-top: 100px;
+      padding-right: 50px;
+    }
   }
 
   source,
@@ -26,9 +30,6 @@
       img {
         width: 478px;
         height: 425px;
-        margin-right: 101px;
-        // display: inline-flex;
-        grid-template-columns: 2fr 1fr;
       }
     }
 
@@ -55,7 +56,6 @@
 
   .type__container {
     text-transform: uppercase;
-    // border: 1px solid red;
     display: flex;
     font-size: 16px;
     font-weight: $font-bold;
@@ -71,7 +71,6 @@
       color: $bg-color;
       border-radius: 8px;
       margin-right: 25px;
-
       cursor: pointer;
 
       &:hover {
@@ -90,7 +89,6 @@
       align-items: center;
       display: inline-flex;
       justify-content: center;
-      //   border: 1px solid red;
     }
   }
 }

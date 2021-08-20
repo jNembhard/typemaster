@@ -1,36 +1,23 @@
 .keyboard {
-  //   overflow: hidden;
+  // overflow: hidden;
 
   .keyboard__container {
     display: flex;
     margin-top: 24px;
 
-    img:nth-child(1) {
-      width: 129px;
-      height: 193px;
-      margin-left: -22px;
-      border-top-right-radius: 30px;
-      border-bottom-right-radius: 30px;
-      background-color: $primary-color;
-      mix-blend-mode: multiply;
-    }
-    img:nth-child(2) {
-      width: 220px;
-      height: 193px;
-      margin-right: 0;
-      border-top-right-radius: 30px;
-      border-bottom-right-radius: 30px;
-      border-top-left-radius: 30px;
-      border-bottom-left-radius: 30px;
-    }
+    picture:nth-child(2) {
+      source,
+      img {
+        width: 220px;
+        height: 193px;
+        margin-right: 0;
+        border-radius: 30px;
 
-    @include mobile {
-      img:nth-child(1) {
-        margin-left: 0;
-      }
-
-      img:nth-child(2) {
-        margin-left: 28px;
+        @include tablet {
+          width: 445px;
+          height: 320px;
+          margin-left: 10px;
+        }
       }
     }
   }
@@ -38,8 +25,36 @@
 
 .keyboard__container--tint {
   position: relative;
-  width: 129px;
+  width: 127px;
   height: 193px;
+
+  picture {
+    source,
+    img {
+      width: 129px;
+      height: 193px;
+      margin-left: -6px;
+      border-radius: 30px;
+      background-color: $primary-color;
+      mix-blend-mode: multiply;
+
+      @include tablet {
+        width: 214px;
+        height: 320px;
+        margin-left: 6px;
+        @include mobile {
+          img {
+            margin-left: 0;
+          }
+        }
+      }
+    }
+  }
+
+  @include tablet {
+    width: 238px;
+    height: 320px;
+  }
 
   &:before {
     content: "";
@@ -54,8 +69,11 @@
     background-color: $primary-color;
     opacity: 1;
 
-    @include mobile {
+    @include tablet {
+      margin-left: 25px;
       margin-right: 0;
+      border-top-left-radius: 30px;
+      border-bottom-left-radius: 30px;
     }
   }
 
@@ -70,15 +88,29 @@
   margin-top: 75px;
   margin-bottom: 116px;
   text-align: center;
+
+  @include tablet {
+    display: flex;
+    text-align: left;
+  }
+
   h2 {
     font-size: 32px;
     font-weight: $font-title;
     color: $secondary-color;
     text-transform: uppercase;
+
+    @include tablet {
+      margin-left: 30px;
+    }
   }
 
   p {
     margin: 17px 24px;
     line-height: 26px;
+
+    @include tablet {
+      margin-left: 86px;
+    }
   }
 }
