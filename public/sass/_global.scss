@@ -1,16 +1,23 @@
 @import url("https://fonts.googleapis.com/css2?family=Barlow:wght@500;700;900&display=swap");
-// Small tablets and large smartphones (landscape view)
+// Small tablets and large smartphones
 $screen-sm-min: 410px;
+$screen-sm-max: 737px;
 
 // Small tablets (portrait view)
 $screen-md-min: 768px;
 
 // Desktops
-$screen-lg-min: 992px;
+$screen-lg-min: 1200px;
 
 // Small devices
 @mixin mobile {
   @media (min-width: #{$screen-sm-min}) {
+    @content;
+  }
+}
+
+@mixin special {
+  @media (max-width: #{$screen-sm-max}) and (orientation:landscape) {
     @content;
   }
 }
@@ -31,7 +38,7 @@ $screen-lg-min: 992px;
 
 // Custom devices
 @mixin custom($screen) {
-  @media (min-width: $screen+"px") {
+  @media (min-width: $screen+"px") and (orientation: landscape) {
     @content;
   }
 }

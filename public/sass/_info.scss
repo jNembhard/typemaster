@@ -39,12 +39,20 @@
       h3 {
         margin-right: 69px;
         margin-left: 39px;
+        @include desktop {
+          margin-right: 30px;
+          margin-left: 30px;
+        }
       }
 
       p {
         margin: inherit;
         margin-right: 69px;
         margin-left: 39px;
+        @include desktop {
+          margin-right: 30px;
+          margin-left: 30px;
+        }
       }
     }
   }
@@ -52,5 +60,10 @@
   @include tablet {
     display: grid;
     grid-template-columns: 380px 380px;
+
+    @include desktop {
+      display: flex;
+      margin: 0 125px;
+    }
   }
 }

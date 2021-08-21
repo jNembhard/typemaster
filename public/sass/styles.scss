@@ -13,7 +13,6 @@ body {
   font-family: $font;
   color: $font-color;
   background-color: $bg-color;
-  //   border: 1px solid red;
 }
 
 header {
@@ -26,6 +25,10 @@ header {
 
   @include tablet {
     margin: 40px 40px 62px;
+
+    @include desktop {
+      margin: 55px 165px 83px;
+    }
   }
 
   img {

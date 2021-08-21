@@ -1,10 +1,9 @@
 .type {
-  margin: 0 0 44px 24px;
-  // border: 1px solid red;
+  margin: 0 0 24px 24px;
   overflow: hidden;
 
-  @include mobile {
-    margin: 0 0 44px 24px;
+  @include desktop {
+    margin: inherit;
   }
 
   @include tablet {
@@ -14,6 +13,23 @@
     .type__description-container {
       margin-top: 100px;
       padding-right: 50px;
+
+      @include desktop {
+        margin: 143px 165px 138px 125px;
+      }
+    }
+  }
+
+  .type__square {
+    display: none;
+
+    @include desktop {
+      display: inherit;
+      img {
+        width: 255px;
+        height: 240px;
+        margin-left: 30px;
+      }
     }
   }
 
@@ -25,18 +41,20 @@
     border-top-left-radius: 30px;
     border-bottom-left-radius: 30px;
 
-    @include tablet {
-      source,
-      img {
-        width: 478px;
-        height: 425px;
-      }
+    @include special {
+      border-radius: 30px;
     }
 
-    @include mobile {
-      width: 392px;
-      margin-left: 48px;
-      margin-left: 0;
+    @include tablet {
+      width: 478px;
+      height: 425px;
+
+      @include desktop {
+        width: 540px;
+        height: 480px;
+        border-top-right-radius: 30px;
+        border-bottom-right-radius: 30px;
+      }
     }
   }
 
@@ -47,11 +65,43 @@
     color: $secondary-color;
     line-height: 48px;
     margin-bottom: 16px;
+
+    @include tablet {
+      font-size: 52px;
+    }
   }
 
   .type__paragraph {
     margin-bottom: 37px;
     line-height: 26px;
+    font-size: 16px;
+
+    @include tablet {
+      font-size: 18px;
+
+      @include desktop {
+        width: 115%;
+      }
+    }
+  }
+
+  .type__image-special {
+    picture {
+      source,
+      img {
+        @include mobile {
+          margin-right: 20px;
+          @include tablet {
+            margin-right: inherit;
+          }
+        }
+      }
+    }
+
+    @include special {
+      display: flex;
+      justify-content: center;
+    }
   }
 
   .type__container {
