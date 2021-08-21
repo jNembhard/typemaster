@@ -517,7 +517,6 @@ body {
   width: 100%;
   font-family: "Barlow", sans-serif;
   color: #7b8bad;
-  background-color: #ffffff;
 }
 
 header {
@@ -553,6 +552,7 @@ header img {
 
 header .header__button {
   background-color: #e8eff2;
+  color: #162542;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
