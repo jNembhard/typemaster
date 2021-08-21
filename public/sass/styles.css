@@ -585,4 +585,8 @@ footer {
   text-align: center;
   margin: 0 48px 55px;
 }
+
+footer span {
+  font-weight: 700;
+}
 /*# sourceMappingURL=styles.css.map */

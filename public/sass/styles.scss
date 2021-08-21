@@ -63,4 +63,7 @@ header {
 footer {
   text-align: center;
   margin: 0 48px 55px;
+  span {
+    font-weight: $font-bold;
+  }
 }
